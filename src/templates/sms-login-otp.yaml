@@ -1,0 +1,13 @@
+templateId: sms_login_otp
+channel: sms
+layout: default
+variables:
+  - otp
+  - expiration_minutes
+body:
+  en:
+    content: |
+      Your login OTP is {{otp}}. This code will expire in {{expiration_minutes}} minutes. Please do not share this code with anyone.
+  ar:
+    content: |
+      رمز التحقق للدخول هو {{otp}}. ينتهي هذا الرمز خلال {{expiration_minutes}} دقائق. الرجاء عدم مشاركة هذا الرمز مع أي شخص.

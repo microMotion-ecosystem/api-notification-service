@@ -1,0 +1,51 @@
+templateId: email_login_otp
+channel: email
+layout: default
+variables:
+  - otp
+  - expiration_minutes
+body:
+  en:
+    subject: Your Login OTP
+    content: |
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>Your Login OTP</title>
+        <style>
+          body {font-family: 'Arial';}
+          h1 {color: #333;}
+          p {font-size: 16px;}
+        </style>
+      </head>
+      <body>
+        <h1>Your Login OTP</h1>
+        <p>Hello,</p>
+        <p>Your one-time password (OTP) for logging in is: <strong>{{otp}}</strong>.</p>
+        <p>This code will expire in <strong>{{expiration_minutes}}</strong> minutes. Please do not share this code with anyone.</p>
+        <p>Thank you for using our service!</p>
+      </body>
+      </html>
+  ar:
+    subject: رمز التحقق للدخول
+    content: |
+      <!DOCTYPE html>
+      <html lang="ar" dir="rtl">
+      <head>
+        <meta charset="UTF-8">
+        <title>رمز التحقق للدخول</title>
+        <style>
+          body {font-family: 'Arial'; text-align: right;}
+          h1 {color: #333;}
+          p {font-size: 16px;}
+        </style>
+      </head>
+      <body>
+        <h1>رمز التحقق للدخول</h1>
+        <p>مرحباً،</p>
+        <p>رمز الدخول لمرة واحدة (OTP) الخاص بك هو: <strong>{{otp}}</strong>.</p>
+        <p>ينتهي هذا الرمز خلال <strong>{{expiration_minutes}}</strong> دقائق. الرجاء عدم مشاركة هذا الرمز مع أي شخص.</p>
+        <p>شكراً لاستخدامك خدمتنا!</p>
+      </body>
+      </html>

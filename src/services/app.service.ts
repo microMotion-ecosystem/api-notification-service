@@ -17,16 +17,9 @@ export class AppService {
      */
     isWorking(): string {
         return (
-            '"' + process.env.APP_NAME + '"' +
-            ' App is Working (' +
-            process.env.APP_ENV +
-            ') ' +
-            process.env.APP_VERSION +
-            '\n' +
-            new Date().toDateString() +
-            ' ' +
-            new Date().toTimeString() +
-            '.\nPlease check the API documentation at "/api-docs" OR "/api-docs-json"'
+            `"${process.env.APP_NAME}" App is Working (${process.env.APP_ENV}) ${process.env.APP_VERSION}
+            ${new Date().toDateString()} ${new Date().toTimeString()}.
+            Please check the API documentation at "/api-docs" OR "/api-docs-json"`
         );
     }
 }

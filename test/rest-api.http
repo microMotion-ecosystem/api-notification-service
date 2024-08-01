@@ -1,14 +1,89 @@
-GET http://localhost:5502/
+GET http://localhost:5504/
 Accept: application/json
 Authorization: Bearer <your-access-token>
 Platform: yu2ahel
 
 
-###
 
-GET http://localhost:5502/demo
-Accept: application/json
-Authorization: Bearer <your-access-token>
-Platform: yu2ahel
 
-###
+### Send Email
+POST http://localhost:5504/send
+Content-Type: application/json
+X-Platform: yu2ahel
+
+{
+  "to": "striker.h@gmail.com",
+  "subject": "Demo Subject",
+  "html": "<h1>This is a demo email</h1>"
+}
+
+
+
+### Send SMS
+POST http://localhost:5504/send-sms
+Content-Type: application/json
+X-Platform: yu2ahel
+
+{
+  "numbers": "966532754598",
+  "msg": "Hello, this is a test message!5"
+}
+
+
+
+### Send SMS
+POST http://localhost:5504/mesgat/send-sms
+Content-Type: application/json
+X-Platform: yu2ahel
+
+{
+"to": "966532754598",
+"msg": "Hello, this is a test message!2"
+}
+
+
+### Get credits
+GET http://localhost:5504/mesgat/credits
+Content-Type: application/json
+X-Platform: yu2ahel
+
+
+### Send Otp
+POST http://localhost:5504/mesgat/send-otp
+Content-Type: application/json
+X-Platform: yu2ahel
+
+{
+  "to": "966532754598"
+}
+
+### Send SMS advanced
+POST http://localhost:5504/mesgat/send-adv
+Content-Type: application/json
+X-Platform: yu2ahel
+
+{
+  "msg": "Hi {var1}, Your current balance is {var2} points",
+  "numbers": [
+    "966532754598"
+
+  ],
+  "vars": [
+    {
+      "var1": "value",
+      "var2": "value"
+    }
+  ],
+  "reqBulkId": true
+}
+
+
+### Send async
+POST http://localhost:5504/send-async
+Content-Type: application/json
+X-Platform: yu2ahel
+
+{
+  "to": "966532754598",
+  "msg": "Hello, this is a test message!2"
+}
