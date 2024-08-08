@@ -1,0 +1,125 @@
+providers:
+  - name: smtp_costume
+    channel: 'email'
+    objectType: smtp
+    host: smtp.example.com
+    port: 587
+    secure: false
+    from: xxx
+    user: xxx
+    password: xxx
+
+  - name: smtp_mailtrap
+    channel: 'email'
+    objectType: smtp
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    secure: false
+    from: hazem.xmotion@gmail.com
+    user: xxx
+    password: xxx
+
+  - name: smtp_mailgun
+    channel: 'email:mailgun'
+    objectType: smtp
+    host: smtp.mailgun.org
+    port: 587
+    secure: false
+    from: hazem.xmotion@gmail.com
+    user: xxx
+    password: xxx
+
+  - name: smtp_mailjet
+    channel: 'email'
+    objectType: smtp
+    host: in-v3.mailjet.com
+    port: 587
+    secure: false
+    from: hazem.xmotion@gmail.com
+    user: xxx
+    password: xxx
+
+  - name: smtp_sendgrid
+    channel: 'email'
+    objectType: smtp
+    host: smtp.sendgrid.net
+    port: 587
+    secure: false
+    user:
+    password:
+
+
+  - name: msg_sms
+    channel: sms
+    objectType: sms
+    host: https://www.msegat.com/gw
+    user: xxx
+    apiKey: xxx
+    senderId: xxx
+
+  - name: msg_twilio
+    channel: sms
+    objectType: twilio
+    host: api.twilio.com
+    accountSid: xxx
+    authToken: xxx
+
+  - name: msg_nexmo
+    channel: sms
+    objectType: nexmo
+    host: https://rest.nexmo.com
+    apiKey: xxx
+    apiSecret: xxx
+
+  - name: msg_plivo
+    channel: sms
+    objectType: plivo
+    host: https://rest.plivo.com
+    authId: xxx
+
+  - name: msg_infobip
+    channel: sms
+    objectType: infobip
+    host: https://api.infobip.com
+    username: xxx
+    password: xxx
+
+  - name: msg_clickatell
+    channel: sms
+    objectType: clickatell
+    host: https://platform.clickatell.com
+    apiKey: xxx
+
+
+  - name: msg_telegram
+    channel: telegram
+    objectType: telegram
+    botToken: xxx
+
+  - name: msg_whatsapp
+    channel: whatsapp
+    objectType: whatsapp
+    accountSid: xxx
+    authToken: xxx
+
+
+  - name: msg_slack
+    channel: slack
+    objectType: slack
+    webhook: https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+twilio_account_sid: acf0e1dd042aab4b20a56845cfd5b89edb
+twilio_auth_token: 79d192cd3ba1a60d3f489072876a324c

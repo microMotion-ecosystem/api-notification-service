@@ -1,0 +1,14 @@
+
+
+### Send Notification
+POST http://localhost:5504/send
+Content-Type: application/json
+X-Platform: yu2ahel
+
+{
+  "to": "striker.h@gmail.com",
+  "subject": "Demo Subject",
+  "html": "<h1>This is a demo email</h1>"
+}
+
+

@@ -1,11 +1,4 @@
-import {
-  IsEmail,
-  IsNotEmpty,
-  IsString,
-  MinLength,
-  IsOptional,
-  IsObject, IsArray,
-} from 'class-validator';
+import { IsNotEmpty, IsString, IsOptional, IsObject, IsArray } from 'class-validator';
 
 export class SendNotificationDto {
   @IsNotEmpty()
@@ -14,7 +7,7 @@ export class SendNotificationDto {
 
   @IsNotEmpty()
   @IsString()
-  channel: string;
+  channel: string; // email, sms, msg, in-app, push OR email:Gmail, email:SendGrid, sms:Msegat, msg:Telegram, in-app:OneSignal, push:Firebase
 
   @IsNotEmpty()
   msg: string;
@@ -29,6 +22,9 @@ export class SendNotificationDto {
 
   @IsOptional()
   @IsObject()
-  templateData?: { [key:string]: string };
+  templateData?: { [key: string]: string };
 
+  @IsOptional()
+  @IsObject()
+  tags?: { [key: string]: string };
 }
